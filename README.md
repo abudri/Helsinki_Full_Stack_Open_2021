@@ -4,6 +4,8 @@ This course contains partial and notable snippets, as well as homeworks, from th
 
 **About**: Learn React, Redux, Node.js, MongoDB, GraphQL and TypeScript in one go! This course will introduce you to modern JavaScript-based web development. The main focus is on building single page applications with ReactJS that use REST APIs built with Node.js.
 
+This course will use Node.js and Express to create web servers.
+
 https://fullstackopen.com/en/
 
 <img src="https://user-images.githubusercontent.com/17362519/112180505-00ef2e00-8bd2-11eb-8911-5380237244d4.png" width="400;" />
