@@ -4,7 +4,7 @@
 
 ## Table of Contents
 
-* Manipulating the document-object from the console
+* [Manipulating the document-object from the console](https://github.com/abudri/Helsinki_Full_Stack_Open_2021/blob/main/part0/README.md#manipulating-the-document-object-from-console)
 * [Glossary](https://github.com/abudri/Helsinki_Full_Stack_Open_2021/blob/main/part0/NOTES.md#glossary)
 
 ## **[Manipulating the document-object from console](https://fullstackopen.com/en/part0/fundamentals_of_web_apps#manipulating-the-document-object-from-console)**
