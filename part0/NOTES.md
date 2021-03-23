@@ -2,7 +2,9 @@
 
 <img src="https://user-images.githubusercontent.com/17362519/112181241-a2767f80-8bd2-11eb-87be-11f4569550ad.png" width="850;" />
 
-## **Table of Contents**
+## Table of Contents
+
+* [Glossary](https://github.com/abudri/Helsinki_Full_Stack_Open_2021/blob/main/part0/NOTES.md#glossary)
 
 
 ## Glossary
