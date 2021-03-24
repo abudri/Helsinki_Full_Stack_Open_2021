@@ -4,6 +4,7 @@
 
 ## Table of Contents
 
+- [Manipulating the document-object from the console](https://github.com/abudri/Helsinki_Full_Stack_Open_2021/blob/main/part0/README.md#manipulating-the-document-object-from-console)
 - [CSS](https://github.com/abudri/Helsinki_Full_Stack_Open_2021/blob/main/part0/README.md#css)
     * [Inline vs. Block Elements](https://github.com/abudri/Helsinki_Full_Stack_Open_2021/blob/main/part0/README.md#block-vs-inline-elements)
 - [Loading a page containing JavaScript - review](https://github.com/abudri/Helsinki_Full_Stack_Open_2021/blob/main/part0/README.md#loading-a-page-containing-javascript---review)
@@ -12,7 +13,6 @@
 - [JavaScript - libraries](https://github.com/abudri/Helsinki_Full_Stack_Open_2021/blob/main/part0/README.md#javascript-libraries)
 - [Full stack web development](https://github.com/abudri/Helsinki_Full_Stack_Open_2021/blob/main/part0/README.md#full-stack-web-development)
 - [JavaScript fatigue](https://github.com/abudri/Helsinki_Full_Stack_Open_2021/blob/main/part0/README.md#javascript-fatigue)
-- [Manipulating the document-object from the console](https://github.com/abudri/Helsinki_Full_Stack_Open_2021/blob/main/part0/README.md#manipulating-the-document-object-from-console)
 - [Glossary](https://github.com/abudri/Helsinki_Full_Stack_Open_2021/blob/main/part0/NOTES.md#glossary)
 
 ## **[Manipulating the document-object from console](https://fullstackopen.com/en/part0/fundamentals_of_web_apps#manipulating-the-document-object-from-console)**
