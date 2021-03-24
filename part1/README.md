@@ -6,10 +6,10 @@
 
 ## Table of Contents
 
-- Troubleshooting
+- Notes / Troubleshooting
 
 
-## Troubleshooting Notes
+## Notes / Troubleshooting
 
 Environment setup can be found in the [lesson page](https://fullstackopen.com/en/part1/introduction_to_react#some-notes).
 
