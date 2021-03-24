@@ -145,3 +145,20 @@ z@Mac-Users-Apple-Computer part1 % ls -a homework
 ..		.gitignore	node_modules	public		yarn.lock
 ```
 
+### Stopping a React App
+
+What I found so far is simply doing `ctrl+c`: 
+
+```bash
+Compiled successfully!
+
+You can now view part1 in the browser.
+
+  Local:            http://localhost:3000
+  On Your Network:  http://192.168.68.107:3000
+
+Note that the development build is not optimized.
+To create a production build, use yarn build.
+
+^C
+```
