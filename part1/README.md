@@ -11,6 +11,8 @@
 
 ## Notes / Troubleshooting
 
+### Environment Setup
+
 Environment setup can be found in the [lesson page](https://fullstackopen.com/en/part1/introduction_to_react#some-notes).
 
 I did run into some environment issues so I followed some instructions found in this Stack Overflow [answer](https://stackoverflow.com/questions/29323982/error-cannot-find-module-lib-cli):
@@ -22,6 +24,10 @@ brew cleanup
 brew install node
 ```
 The above finally got my environment working properly.
+
+### Warning: `npx create-react-app <directory>` Automatically Makes a Project a Git Repository
+
+`npx create-react-app` automatically makes the project a git repository unless the application is created within an already existing repository. Most likely you do not want the project to become a repository, so run the command `rm -rf .git` in the root of the project.
 
 ### Creating a React App
 
