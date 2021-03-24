@@ -13,7 +13,7 @@
 - [JavaScript - libraries](https://github.com/abudri/Helsinki_Full_Stack_Open_2021/blob/main/part0/README.md#javascript-libraries)
 - [Full stack web development](https://github.com/abudri/Helsinki_Full_Stack_Open_2021/blob/main/part0/README.md#full-stack-web-development)
 - [JavaScript fatigue](https://github.com/abudri/Helsinki_Full_Stack_Open_2021/blob/main/part0/README.md#javascript-fatigue)
-- [Glossary](https://github.com/abudri/Helsinki_Full_Stack_Open_2021/blob/main/part0/NOTES.md#glossary)
+- [Glossary](https://github.com/abudri/Helsinki_Full_Stack_Open_2021/blob/main/part0/README.md#glossary)
 
 ## **[Manipulating the document-object from console](https://fullstackopen.com/en/part0/fundamentals_of_web_apps#manipulating-the-document-object-from-console)**
 
