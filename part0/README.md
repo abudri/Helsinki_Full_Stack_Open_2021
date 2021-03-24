@@ -5,7 +5,7 @@
 ## Table of Contents
 
 - [CSS](https://github.com/abudri/Helsinki_Full_Stack_Open_2021/blob/main/part0/README.md#css)
-    * inline
+    * [Inline vs. Block Elements](https://github.com/abudri/Helsinki_Full_Stack_Open_2021/blob/main/part0/README.md#block-vs-inline-elements)
 - [Loading a page containing JavaScript - review](https://github.com/abudri/Helsinki_Full_Stack_Open_2021/blob/main/part0/README.md#loading-a-page-containing-javascript---review)
 - [AJAX](https://github.com/abudri/Helsinki_Full_Stack_Open_2021/blob/main/part0/README.md#ajax)
 - [Single page app](https://github.com/abudri/Helsinki_Full_Stack_Open_2021/blob/main/part0/README.md#single-page-app)
