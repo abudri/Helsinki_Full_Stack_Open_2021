@@ -89,7 +89,7 @@ The `<body>` is a block element, meaning it takes up space on the page. A block 
 
 Let's review what happens when the page [https://studies.cs.helsinki.fi/exampleapp/notes](https://studies.cs.helsinki.fi/exampleapp/notes) is opened on the browser.
 
-<img src="https://fullstackopen.com/static/7094858c9c7ec9149d10607e9e1d94bb/5a190/19e.png" width="650;" />
+<img src="https://fullstackopen.com/static/7094858c9c7ec9149d10607e9e1d94bb/5a190/19e.png" width="550;" />
 
 - The browser fetches the HTML code defining the content and the structure of the page from the server using an HTTP `GET` request.
 - Links in the HTML code cause the browser to also fetch the CSS style sheet main.css......
@@ -123,13 +123,13 @@ The Notes page of our application bears some resemblance to SPA-style apps, but 
 
 A single page app version of our example application can be found from [https://studies.cs.helsinki.fi/exampleapp/spa](https://studies.cs.helsinki.fi/exampleapp/spa). At first glance, the application looks exactly the same as the previous one. The HTML code is almost identical, but the JavaScript file is different (spa.js) and there is a small change in how the form-tag is defined:
 
-![https://fullstackopen.com/static/cb1893b2f18168168b3337ef994f0347/5a190/25e.png](https://fullstackopen.com/static/cb1893b2f18168168b3337ef994f0347/5a190/25e.png)
+<img src="https://fullstackopen.com/static/cb1893b2f18168168b3337ef994f0347/5a190/25e.png" width="650;" />
 
 The form has no action or method attributes to define how and where to send the input data.
 
 Open the Network-tab and empty it by clicking the 🚫 symbol. When you now create a new note, you'll notice that the browser sends only one request to the server.
 
-![https://fullstackopen.com/static/07beb53097a520517c1c28ff17fc907a/5a190/26e.png](https://fullstackopen.com/static/07beb53097a520517c1c28ff17fc907a/5a190/26e.png)
+<img src="https://fullstackopen.com/static/07beb53097a520517c1c28ff17fc907a/5a190/26e.png" width="650;" />
 
 The POST request to the address new_note_spa contains the new note as JSON-data containing both the content of the note (content) and the timestamp (date):
 
@@ -140,7 +140,7 @@ The POST request to the address new_note_spa contains the new note as JSON-dat
 
 The Content-Type header of the request tells the server that the included data is represented in the JSON format.
 
-![https://fullstackopen.com/static/5819436c98e4cce143fce3fe9bc534b9/5a190/27e.png](https://fullstackopen.com/static/5819436c98e4cce143fce3fe9bc534b9/5a190/27e.png)
+<img src="https://fullstackopen.com/static/5819436c98e4cce143fce3fe9bc534b9/5a190/27e.png" width="650;" />
 
 Without this header, the server would not know how to correctly parse the data.
 
@@ -233,4 +233,4 @@ ____
 
 **CSS** - The head element of the HTML code of the Notes page contains a [link](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link) tag, which determines that the browser must fetch a [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) style sheet from the address [main.css](https://studies.cs.helsinki.fi/exampleapp/main.css). Cascading Style Sheets, or CSS, is a markup language used to determine the appearance of web pages. [Reference](https://fullstackopen.com/en/part0/fundamentals_of_web_apps#event-handlers-and-callback-functions) (Part 0b)
 
-More on CSS from lesson 0b
+[More on CSS from lesson 0b](https://github.com/abudri/Helsinki_Full_Stack_Open_2021/blob/main/part0/README.md#css)
