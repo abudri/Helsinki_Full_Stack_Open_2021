@@ -1,5 +1,5 @@
 // First sample React app file with a variety of ways of displaying things
-// Keeping this file as a scratch note and not best practices
+// Keeping this file as a scratch note and not best practices 
 
 import logo from './logo.svg';
 import './App.css';
