@@ -5,7 +5,10 @@
 <img src="https://user-images.githubusercontent.com/17362519/112490109-78999600-8d55-11eb-8753-fa0246717624.png" width="300;" />
 
 ## Table of Contents
--
+- [Variables](https://github.com/abudri/Helsinki_Full_Stack_Open_2021/blob/main/part1/1b/README.md#variables)
+- [Arrays](https://github.com/abudri/Helsinki_Full_Stack_Open_2021/blob/main/part1/1b/README.md#arrays)
+- [Objects](https://github.com/abudri/Helsinki_Full_Stack_Open_2021/blob/main/part1/1b/README.md#objects)
+- [Functions](https://github.com/abudri/Helsinki_Full_Stack_Open_2021/blob/main/part1/1b/README.md#functions)
 
 During the course, we have a goal and a need to learn a sufficient amount of JavaScript in addition to web development.
 
