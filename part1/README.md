@@ -6,12 +6,12 @@
 
 ## Table of Contents
 
-- Notes / Troubleshooting
+- Environment Setup
+- Creating, Starting, and Stopping a React App
+- Component
+- JSX
 
-
-## Notes / Troubleshooting
-
-### Environment Setup
+## Environment Setup
 
 Environment setup can be found in the [lesson page](https://fullstackopen.com/en/part1/introduction_to_react#some-notes).
 
@@ -29,14 +29,13 @@ The above finally got my environment working properly.
 
 `npx create-react-app` automatically makes the project a git repository unless the application is created within an already existing repository. Most likely you do not want the project to become a repository, so run the command `rm -rf .git` in the root of the project.
 
+## Creating, Starting, and Stopping a React App
+
 ### Creating a React App
 
-Command to create a react app:
+`$ npx create-react-app <name_of_directory_you_want_files_placed_in>` - Command to create a react app in said directory.
 
-```bash
-$ npx create-react-app <name_of_directory_you_want_files_placed_in>
-```
-Output after `mkdir homework`:
+My output after `mkdir homework` and then creating the app there:
 
 ```bash
 z@Mac-Users-Apple-Computer part1 % mkdir homework
@@ -151,6 +150,10 @@ z@Mac-Users-Apple-Computer part1 % ls -a homework
 ..		.gitignore	node_modules	public		yarn.lock
 ```
 
+### Starting a React App
+
+`$ npm start` - This command started the react app. By default, the application runs in localhost port 3000 with the address http://localhost:3000
+
 ### Stopping a React App
 
 What I found so far is simply doing `ctrl+c`: 
@@ -167,4 +170,138 @@ Note that the development build is not optimized.
 To create a production build, use yarn build.
 
 ^C
+```
+
+## Component
+
+The file `App.js` now defines a React-component with the name App. The command on the final line of file `index.js`.
+
+```js
+ReactDOM.render(<App />, document.getElementById('root'))
+```
+
+renders its contents into the div-element, defined in the file `public/index.html`, having the id value 'root'.
+
+By default, the file `public/index.html` doesn't contain any HTML markup that is visible to us in the browser. You can try adding some HTML into the file. However, when using React, all content that needs to be rendered is usually defined as React components.
+
+Let's take a closer look at the code defining the component:
+
+```js
+const App = () => (
+  <div>
+    <p>Hello world</p>
+  </div>
+)
+```
+
+As you probably guessed, the component will be rendered as a div-tag, which wraps a p-tag containing the text Hello world.
+
+Technically the component is defined as a JavaScript function. The following is a function (which does not receive any parameters):
+
+```js
+() => (
+  <div>
+    <p>Hello world</p>
+  </div>
+)
+```
+
+The function is then assigned to a constant variable `App`:
+
+```js
+const App = ...
+```
+
+There are a few ways to define functions in JavaScript. Here we will use [arrow functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), which are described in a newer version of JavaScript known as [ECMAScript 6](http://es6-features.org/#Constants), also called ES6.
+
+Because the function consists of only a single expression we have used a shorthand, which represents this piece of code:
+
+```js
+const App = () => {
+  return (
+    <div>
+      <p>Hello world</p>
+    </div>
+  )
+}
+```
+
+In other words, the function returns the value of the expression.
+
+The function defining the component may contain any kind of JavaScript code. Modify your component to be as follows and observe what happens in the console:
+
+```js
+const App = () => {
+  console.log('Hello from component')
+  return (
+    <div>
+      <p>Hello world</p>
+    </div>
+  )
+}
+```
+
+It is also possible to render dynamic content inside of a component.
+
+Modify the component as follows:
+
+```js
+const App = () => {
+  const now = new Date()
+  const a = 10
+  const b = 20
+
+  return (
+    <div>
+      <p>Hello world, it is {now.toString()}</p>
+      <p>
+        {a} plus {b} is {a + b}
+      </p>
+    </div>
+  )
+}
+```
+
+Any JavaScript code within the curly braces is evaluated and the result of this evaluation is embedded into the defined place in the HTML produced by the component.
+
+## JSX
+
+It seems like React components are returning HTML markup. However, this is not the case. The layout of React components is mostly written using [JSX](https://reactjs.org/docs/introducing-jsx.html). Although JSX looks like HTML, we are actually dealing with a way to write JavaScript. Under the hood, JSX returned by React components is compiled into JavaScript.
+
+After compiling, our application looks like this:
+
+```js
+const App = () => {
+  const now = new Date()
+  const a = 10
+  const b = 20
+  return React.createElement(
+    'div',
+    null,
+    React.createElement(
+      'p', null, 'Hello world, it is ', now.toString()
+    ),
+    React.createElement(
+      'p', null, a, ' plus ', b, ' is ', a + b
+    )
+  )
+}
+```
+
+The compiling is handled by [Babel](https://babeljs.io/repl/). Projects created with `create-react-app` are configured to compile automatically. We will learn more about this topic in [part 7](https://fullstackopen.com/en/part7) of this course.
+
+It is also possible to write React as "pure JavaScript" without using JSX. Although, nobody with a sound mind would actually do so.
+
+In practice, JSX is much like HTML with the distinction that with JSX you can easily embed dynamic content by writing appropriate JavaScript within curly braces. The idea of JSX is quite similar to many templating languages, such as Thymeleaf used along with Java Spring, which are used on servers.
+
+JSX is "[XML](https://developer.mozilla.org/en-US/docs/Web/XML/XML_introduction)-like", which means that every tag needs to be closed. For example, a newline is an empty element, which in HTML can be written as follows:
+
+```html
+<br>
+```
+
+but when writing JSX, the tag needs to be closed:
+
+```js
+<br />
 ```
