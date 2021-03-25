@@ -6,10 +6,13 @@
 
 ## Table of Contents
 
-- Environment Setup
-- Creating, Starting, and Stopping a React App
-- Component
-- JSX
+- [Environment Setup](https://github.com/abudri/Helsinki_Full_Stack_Open_2021/blob/main/part1/README.md#environment-setup)
+- [Creating, Starting, and Stopping a React App](https://github.com/abudri/Helsinki_Full_Stack_Open_2021/blob/main/part1/README.md#creating-starting-and-stopping-a-react-app)
+- [Component](https://github.com/abudri/Helsinki_Full_Stack_Open_2021/blob/main/part1/README.md#component)
+- [JSX](https://github.com/abudri/Helsinki_Full_Stack_Open_2021/blob/main/part1/README.md#jsx)
+- [Multiple components](https://github.com/abudri/Helsinki_Full_Stack_Open_2021/blob/main/part1/README.md#multiple-components)
+- [props: passing data to components](https://github.com/abudri/Helsinki_Full_Stack_Open_2021/blob/main/part1/README.md#props-passing-data-to-components)
+- [Some notes](https://github.com/abudri/Helsinki_Full_Stack_Open_2021/blob/main/part1/README.md#some-notes)
 
 ## Environment Setup
 
