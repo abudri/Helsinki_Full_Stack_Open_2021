@@ -181,6 +181,7 @@ Naturally, objects in JavaScript can also have methods. However, during this cou
 Objects can also be defined using so-called constructor functions, which results in a mechanism reminiscent of many other programming languages, e.g. Java's classes. Despite this similarity, JavaScript does not have classes in the same sense as object-oriented programming languages. There has been, however, an addition of the class syntax starting from version ES6, which in some cases helps structure object-oriented classes.
 
 ## Functions (Arrow Functions)
+
 We have already become familiar with defining arrow functions. The complete process, without cutting corners, to defining an arrow function is as follows:
 
 ```css
@@ -221,7 +222,8 @@ const tSquared = t.map(p => p * p)
 // tSquared is now [1, 4, 9]
 ```
 
-The arrow function feature was added to JavaScript only a couple of years ago, with version [ES6](http://es6-features.org/). Prior to this the only way to define functions was by using the keyword *function*.
+The arrow function feature was added to JavaScript only a couple of years ago, with version [ES6](http://es6-features.org/). Prior to this the only way to define functions was by using the keyword *`function`*.
+
 There are two ways by which the function can be referenced; one is giving a name in a [function declaration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function).
 
 ```jsx
