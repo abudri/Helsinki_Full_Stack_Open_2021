@@ -305,3 +305,126 @@ but when writing JSX, the tag needs to be closed:
 ```js
 <br />
 ```
+
+## Multiple components
+
+Let's modify the file App.js as follows (NB: import at the top of the file and export at the bottom are left out in these examples, now and in the future. They are still needed for the code to work):
+
+<img src="https://user-images.githubusercontent.com/17362519/112486453-42a6e280-8d52-11eb-8f01-93df77738483.png" width="650;" />
+
+We have defined a new component `Hello` and used it inside the component App. Naturally, a component can be used multiple times:
+
+<img src="https://user-images.githubusercontent.com/17362519/112486549-5b16fd00-8d52-11eb-8301-7957b0620b5c.png" width="650;" />
+
+Writing components with React is easy, and by combining components, even a more complex application can be kept fairly maintainable. Indeed, a core philosophy of React is composing applications from many specialized reusable components.
+
+Another strong convention is the idea of a root component called App at the top of the component tree of the application. Nevertheless, as we will learn in [part 6](https://fullstackopen.com/en/part6), there are situations where the component `App` is not exactly the root, but is wrapped within an appropriate utility component.
+
+## props: passing data to components
+
+It is possible to pass data to components using so called props.
+
+Let's modify the component `Hello` as follows:
+
+<img src="https://user-images.githubusercontent.com/17362519/112486722-8568ba80-8d52-11eb-8d88-61a45c3abb94.png" width="650;" />
+
+Now the function defining the component has a parameter props. As an argument, the parameter receives an object, which has fields corresponding to all the "props" the user of the component defines.
+
+The props are defined as follows:
+
+<img src="https://user-images.githubusercontent.com/17362519/112486808-99acb780-8d52-11eb-8845-bab040001702.png" width="650;" />
+
+There can be an arbitrary number of props and their values can be "hard coded" strings or results of JavaScript expressions. If the value of the prop is achieved using JavaScript it must be wrapped with curly braces.
+
+Let's modify the code so that the component `Hello` uses two props:
+
+<img src="https://user-images.githubusercontent.com/17362519/112486913-b1843b80-8d52-11eb-9af4-cc5bde02d6b6.png" width="650;" />
+
+The props sent by the component `App` are the values of the variables, the result of the evaluation of the sum expression and a regular string.
+
+## Some notes
+
+React has been configured to generate quite clear error messages. Despite this, you should, at least in the beginning, advance in very small steps and make sure that every change works as desired.
+
+The console should always be open. If the browser reports errors, it is not advisable to continue writing more code, hoping for miracles. You should instead try to understand the cause of the error and, for example, go back to the previous working state:
+
+<img src="https://user-images.githubusercontent.com/17362519/112487093-d8427200-8d52-11eb-9206-ef4d37b7d11f.png" width="650;" />
+
+It is good to remember that in React it is possible and worthwhile to write `console.log()` commands (which print to the console) within your code.
+
+Also keep in mind that **React component names must be capitalized**. If you try defining a component as follows:
+
+```js
+const footer = () => {
+  return (
+    <div>
+      greeting app created by <a href="https://github.com/mluukkai">mluukkai</a>
+    </div>
+  )
+}
+```
+and use it like this
+
+<img src="https://user-images.githubusercontent.com/17362519/112487257-f7410400-8d52-11eb-8de6-7a5aee0ba20e.png" width="650;" />
+
+the page is not going to display the content defined within the Footer component, and instead React only creates an empty footer element. If you change the first letter of the component name to a capital letter, then React creates a div-element defined in the Footer component, which is rendered on the page.
+
+Note that the content of a React component (usually) needs to contain one root element. If we, for example, try to define the component App without the outermost div-element:
+
+```js
+const App = () => {
+  return (
+    <h1>Greetings</h1>
+    <Hello name="Maya" age={26 + 10} />
+    <Footer />
+  )
+}
+```
+
+the result is an error message.
+
+<img src="https://user-images.githubusercontent.com/17362519/112487443-163f9600-8d53-11eb-8d9b-d5593a8098fd.png" width="650;" />
+
+Using a root element is not the only working option. An array of components is also a valid solution:
+
+```js
+const App = () => {
+  return [
+    <h1>Greetings</h1>,
+    <Hello name="Maya" age={26 + 10} />,
+    <Footer />
+  ]
+}
+```
+
+However, when defining the root component of the application this is not a particularly wise thing to do, and it makes the code look a bit ugly.
+
+Because the root element is stipulated, we have "extra" div-elements in the DOM-tree. This can be avoided by using fragments, i.e. by wrapping the elements to be returned by the component with an empty element:
+
+```js
+const App = () => {
+  const name = 'Peter'
+  const age = 10
+
+  return (
+    <>
+      <h1>Greetings</h1>
+      <Hello name="Maya" age={26 + 10} />
+      <Hello name={name} age={age} />
+      <Footer />
+    </>
+  )
+}
+```
+
+It now compiles successfully, and the DOM generated by React no longer contains the extra div-element.
+
+
+
+
+
+
+
+
+
+
