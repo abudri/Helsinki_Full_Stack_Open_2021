@@ -14,15 +14,21 @@ During the course, we have a goal and a need to learn a sufficient amount of Jav
 
 JavaScript has advanced rapidly in the last few years and in this course we use features from the newer versions. The official name of the JavaScript standard is [ECMAScript](https://en.wikipedia.org/wiki/ECMAScript). At this moment, the latest version is the one released in June of 2020 with the name [ECMAScript®2020](https://www.ecma-international.org/ecma-262/), otherwise known as ES11.
 
-Browsers do not yet support all of JavaScript's newest features. Due to this fact, a lot of code run in browsers has been transpiled from a newer version of JavaScript to an older, more compatible version.
+Browsers do not yet support all of JavaScript's newest features. Due to this fact, a lot of code run in browsers has been **transpiled** from a newer version of JavaScript to an older, more compatible version.
+
+#### Babel
 
 Today, the most popular way to do the transpiling is by using [Babel](https://babeljs.io/). Transpilation is automatically configured in React applications created with create-react-app. We will take a closer look at the configuration of the transpilation in [part 7](https://fullstackopen.com/en/part7) of this course.
 
+#### Node.js
+
 [Node.js](https://nodejs.org/en/) is a JavaScript runtime environment based on Google's [Chrome V8](https://developers.google.com/v8/) JavaScript engine and works practically anywhere - from servers to mobile phones. Let's practice writing some JavaScript using Node. It is expected that the version of Node.js installed on your machine is at least version 14.8.0. The latest versions of Node already understand the latest versions of JavaScript, so the code does not need to be transpiled.
 
-The code is written into files ending with .js that are run by issuing the command *node name_of_file.js*
+The code is written into files ending with .js that are run by issuing the command `node name_of_file.js`.
 
-It is also possible to write JavaScript code into the Node.js console, which is opened by typing *node* in the command-line, as well as into the browser's developer tool console. The newest revisions of Chrome handle the newer features of JavaScript [pretty well](http://kangax.github.io/compat-table/es2016plus/) without transpiling the code. Alternatively you can use a tool like [JS Bin](https://jsbin.com/?js,console).
+#### Node.js Console
+
+It is also possible to write JavaScript code into the Node.js console, which is opened by typing `node` in the command-line, as well as into the browser's developer tool console. The newest revisions of Chrome handle the newer features of JavaScript [pretty well](http://kangax.github.io/compat-table/es2016plus/) without transpiling the code. Alternatively you can use a tool like [JS Bin](https://jsbin.com/?js,console).
 
 JavaScript is sort of reminiscent, both in name and syntax, to Java. But when it comes to the core mechanism of the language they could not be more different. Coming from a Java background, the behavior of JavaScript can seem a bit alien, especially if one does not make the effort to look up its features.
 
@@ -237,3 +243,18 @@ const result = average(2, 5)
 ```
 
 During this course we will define all functions using the arrow syntax.
+
+____
+
+### Compilation vs Transpilation
+
+[https://stackoverflow.com/questions/44931479/compiling-vs-transpiling](https://stackoverflow.com/questions/44931479/compiling-vs-transpiling)
+
+**Compiler:** is an umbrella term to describe a program that takes source code written in one language and produce a (or many) output file in some other language. In practice we mostly use this term to describe a compiler such as gcc which takes in C code as input and produces a binary executable (machine code) as output.
+
+**Transpilers** are also known as source-to-source compilers. So in essence they are a subset of compilers which take in a source code file and convert it to another **source code file** in some other language or a different version of the same language. The ouput is generally understandable by a human. This output still has to go through a compiler or interpreter to be able to run on the machine.
+
+Some examples of transpilers:
+
+1. [Emscripten](https://kripken.github.io/emscripten-site/): Transpiles C/C++ to JavaScript
+2. [Babel](https://babeljs.io/): Transpiles ES6+ code to ES5 (ES6 and ES5 are different versions or generations of the JavaScript language)
