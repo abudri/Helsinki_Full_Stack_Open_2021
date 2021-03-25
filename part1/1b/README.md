@@ -180,7 +180,7 @@ Naturally, objects in JavaScript can also have methods. However, during this cou
 
 Objects can also be defined using so-called constructor functions, which results in a mechanism reminiscent of many other programming languages, e.g. Java's classes. Despite this similarity, JavaScript does not have classes in the same sense as object-oriented programming languages. There has been, however, an addition of the class syntax starting from version ES6, which in some cases helps structure object-oriented classes.
 
-## Functions
+## Functions (Arrow Functions)
 We have already become familiar with defining arrow functions. The complete process, without cutting corners, to defining an arrow function is as follows:
 
 ```css
