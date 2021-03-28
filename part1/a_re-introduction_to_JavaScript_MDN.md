@@ -791,7 +791,7 @@ var charsInBody = (function counter(elm) {
 
 The name provided to a function expression as above is only available to the function's own scope. This allows more optimizations to be done by the engine and results in more readable code. The name also shows up in the debugger and some stack traces, which can save you time when debugging.
 
-Note that JavaScript functions are themselves objects — like everything else in JavaScript — and you can add or change properties on them just like we've seen earlier in the Objects section.
+Note that **JavaScript functions are themselves objects** — like everything else in JavaScript — and you can add or change properties on them just like we've seen earlier in the Objects section.
 
 ## [Custom objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript#custom_objects)
 
