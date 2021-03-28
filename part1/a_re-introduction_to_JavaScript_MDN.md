@@ -441,7 +441,7 @@ JavaScript objects can be thought of as simple collections of name-value pairs. 
 - HashMaps in Java.
 - Associative arrays in PHP.
 
-The fact that this data structure is so widely used is a testament to its versatility. Since everything (bar core types) in JavaScript is an object, any JavaScript program naturally involves a great deal of hash table lookups. It's a good thing they're so fast!
+The fact that this data structure is so widely used is a testament to its versatility. Since **everything (bar core types) in JavaScript is an object**, any JavaScript program naturally involves a great deal of hash table lookups. It's a good thing they're so fast!
 
 The "name" part is a JavaScript string, while the value can be any JavaScript value — including more objects. This allows you to build data structures of arbitrary complexity.
 
@@ -459,7 +459,7 @@ var obj = {};
 
 ```
 
-These are semantically equivalent; the second is called object literal syntax and is more convenient. This syntax is also the core of JSON format and should be preferred at all times.
+These are semantically equivalent; the second is called **object literal syntax** and is more convenient. This syntax is also the core of JSON format and should be preferred at all times.
 
 Object literal syntax can be used to initialize an object in its entirety:
 
