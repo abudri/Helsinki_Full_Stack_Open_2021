@@ -1,6 +1,8 @@
+# About
+
 Each directory above, 1a, 1b, 1c, and 1d contain the lesson notes in their respective `README.md`s.
 
-### JavaScript materials Recommened in Part 1b
+## JavaScript materials Recommened in Part 1b
 
 There exist both good and poor guides for JavaScript on the Internet. Most of the links on this page relating to JavaScript feature reference [Mozilla's JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript).
 
