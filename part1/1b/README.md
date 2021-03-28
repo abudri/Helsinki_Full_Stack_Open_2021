@@ -9,6 +9,7 @@
 - [Arrays](https://github.com/abudri/Helsinki_Full_Stack_Open_2021/blob/main/part1/1b/README.md#arrays)
 - [Objects](https://github.com/abudri/Helsinki_Full_Stack_Open_2021/blob/main/part1/1b/README.md#objects)
 - [Functions](https://github.com/abudri/Helsinki_Full_Stack_Open_2021/blob/main/part1/1b/README.md#functions)
+- [Object methods and `this`]()
 
 During the course, we have a goal and a need to learn a sufficient amount of JavaScript in addition to web development.
 
@@ -247,6 +248,57 @@ const result = average(2, 5)
 ```
 
 During this course we will define all functions using the arrow syntax.
+
+## Object methods and `this`
+
+Due to the fact that during this course we are using a version of React containing React Hooks we have no need for defining objects with methods. The contents of this chapter are not relevant to the course but are certainly in many ways good to know. In particular when using older versions of React one must understand the topics of this chapter.
+Arrow functions and functions defined using the `function` keyword vary substantially when it comes to how they behave with respect to the keyword [`this`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this), which refers to the object itself.
+We can assign methods to an object by defining properties that are functions:
+
+```js
+const arto = {
+  name: 'Arto Hellas',
+  age: 35,
+  education: 'PhD',
+  greet: function() {    console.log('hello, my name is ' + this.name)  },}
+
+arto.greet()  // "hello, my name is Arto Hellas" gets printed
+```
+
+Methods can be assigned to objects even after the creation of the object:
+
+<img src="https://user-images.githubusercontent.com/17362519/112751298-3b264a00-8f9b-11eb-9ffb-1015efceff08.png" width="650;" />
+
+Let's slightly modify the object:
+
+<img src="https://user-images.githubusercontent.com/17362519/112751325-5abd7280-8f9b-11eb-9fdd-501022bd95a4.png" width="650;" />
+
+Now the object has the method `doAddition` which calculates the sum of numbers given to it as parameters. The method is called in the usual way, using the object `arto.doAddition(1, 4)` or by storing a method reference in a variable and calling the method through the variable: `referenceToAddition(10, 15)`.
+If we try to do the same with the method `greet` we run into an issue:
+
+```js
+arto.greet()       // "hello, my name is Arto Hellas" gets printed
+
+const referenceToGreet = arto.greet
+referenceToGreet() // prints "hello, my name is undefined"
+```
+
+When calling the method through a reference, the method loses knowledge of what was the original `this`. Contrary to other languages, in JavaScript the value of [`this`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this) is defined based on how the method is called. When calling the method through a reference the value of `this` becomes the so-called [global object](https://developer.mozilla.org/en-US/docs/Glossary/Global_object) and the end result is often not what the software developer had originally intended.
+
+Losing track of `this` when writing JavaScript code brings forth a few potential issues. Situations often arise where React or Node (or more specifically the JavaScript engine of the web browser) needs to call some method in an object that the developer has defined. However, in this course we avoid these issues by using the "this-less" JavaScript.
+One situation leading to the "disappearance" of `this` arises when we set a timeout to call the `greet` function on the `arto` object, using the [setTimeout](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout) function.
+
+<img src="https://user-images.githubusercontent.com/17362519/112751361-9e17e100-8f9b-11eb-8950-742ab2248ed4.png" width="650;" />
+
+As mentioned, the value of *this* in JavaScript is defined based on how the method is being called. When *setTimeout* is calling the method, it is the JavaScript engine that actually calls the method and, at that point, *this* refers to the global object.
+There are several mechanisms by which the original *this* can be preserved. One of these is using a method called [bind](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind):
+
+`setTimeout(arto.greet.bind(arto), 1000)`
+
+Calling `arto.greet.bind(arto)` creates a new function where `this` is bound to point to Arto, independent of where and how the method is being called.
+Using [arrow functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) it is possible to solve some of the problems related to `this`. They should not, however, be used as methods for objects because then `this` does not work at all. We will come back later to the behavior of `this` in relation to arrow functions.
+
+If you want to gain a better understanding of how `this` works in JavaScript, the Internet is full of material about the topic, e.g. the screencast series [Understand JavaScript's `this` Keyword in Depth](https://egghead.io/courses/understand-javascript-s-this-keyword-in-depth) by [egghead.io](https://egghead.io/) is highly recommended!
 
 ____
 
