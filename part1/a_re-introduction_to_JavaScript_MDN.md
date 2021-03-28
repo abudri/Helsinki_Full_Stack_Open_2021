@@ -728,7 +728,7 @@ You can achieve the same result using the [spread operator](https://developer.m
 
 For instance: `avg(...numbers)`
 
-JavaScript lets you create anonymous functions.
+JavaScript lets you create **anonymous functions**.
 
 ```
 var avg = function() {
@@ -757,7 +757,7 @@ b; // 2
 
 ```
 
-JavaScript allows you to call functions recursively. This is particularly useful for dealing with tree structures, such as those found in the browser DOM.
+JavaScript allows you to call functions **recursively**. This is particularly useful for dealing with tree structures, such as those found in the browser DOM.
 
 ```
 function countChars(elm) {
