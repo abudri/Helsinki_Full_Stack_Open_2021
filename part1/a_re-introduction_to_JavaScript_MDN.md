@@ -14,6 +14,33 @@
 - [Functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript#functions)
 - [Custom objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript#custom_objects)
 - [Closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript#closures)
+- [My Quick Notes From This Article]()
+
+## My Quick Notes From This Article
+
+- Everything (bar core types) in JavaScript is an **object**
+- `var obj = {};` - This is called **object literal syntax** and is more convenient. This syntax is also the core of JSON format and should be preferred at all times.
+- One way of creating arrays is as follows:
+
+```
+var a = new Array();
+a[0] = 'dog';
+a[1] = 'cat';
+a[2] = 'hen';
+a.length; // 3
+
+```
+
+A more convenient notation is to use an **array literal**:
+
+```
+var a = ['dog', 'cat', 'hen'];
+a.length; // 3
+```
+
+- **"objects" and "prototypes"** - In classic Object Oriented Programming, objects are collections of data and methods that operate on that data. JavaScript is a prototype-based language that contains no class statement, as you'd find in C++ or Java (this is sometimes confusing for programmers accustomed to languages with a class statement). Instead, JavaScript uses functions as classes. [https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript#custom_objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript#custom_objects)
+
+____
 
 Why a re-introduction? Because [JavaScript](https://developer.mozilla.org/en-US/docs/Glossary/JavaScript) is notorious for being misunderstood. It is often derided as being a toy, but beneath its layer of deceptive simplicity, powerful language features await. JavaScript is now used by an incredible number of high-profile applications, showing that deeper knowledge of this technology is an important skill for any web or mobile developer.
 
