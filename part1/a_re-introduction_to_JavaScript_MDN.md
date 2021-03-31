@@ -2,6 +2,7 @@
 
 ## Table of contents
 
+- [My Quick Notes From This Article](https://github.com/abudri/Helsinki_Full_Stack_Open_2021/blob/main/part1/a_re-introduction_to_JavaScript_MDN.md#my-quick-notes-from-this-article)
 - [Overview](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript#overview)
 - [Numbers](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript#numbers)
 - [Strings](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript#strings)
@@ -14,7 +15,6 @@
 - [Functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript#functions)
 - [Custom objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript#custom_objects)
 - [Closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript#closures)
-- [My Quick Notes From This Article]()
 
 ## My Quick Notes From This Article
 
